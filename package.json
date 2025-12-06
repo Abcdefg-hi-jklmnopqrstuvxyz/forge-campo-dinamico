@@ -1,0 +1,17 @@
+{
+  "name": "forge-campo-dinamico",
+  "version": "1.0.0",
+  "description": "Proyecto Forge para campos dinamicos en Jira",
+  "main": "src/index.jsx",
+  "scripts": {
+    "build": "forge deploy --no-interaction",
+    "lint": "forge lint"
+  },
+  "dependencies": {
+    "@forge/api": "^4.10.0",
+    "@forge/ui": "^1.9.0"
+  },
+  "devDependencies": {
+    "@forge/cli": "^11.2.0"
+  }
+}

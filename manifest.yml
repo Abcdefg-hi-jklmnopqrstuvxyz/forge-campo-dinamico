@@ -1,0 +1,35 @@
+modules:
+  jira:customFieldType:
+    - key: campo-resuelto-por
+      name: Resuelto Por
+      description: Lista de usuarios segun cliente
+      type: string
+      edit:
+        function: edit-resuelto-por
+      read:
+        function: view-resuelto-por
+    - key: campo-dpto-resuelto-por
+      name: Dpto Resuelto Por
+      description: Lista de departamentos segun cliente
+      type: string
+      edit:
+        function: edit-dpto-resuelto-por
+      read:
+        function: view-dpto-resuelto-por
+  function:
+    - key: edit-resuelto-por
+      handler: index.editResueltoPor
+    - key: view-resuelto-por
+      handler: index.viewResueltoPor
+    - key: edit-dpto-resuelto-por
+      handler: index.editDptoResueltoPor
+    - key: view-dpto-resuelto-por
+      handler: index.viewDptoResueltoPor
+app:
+  id: ari:cloud:ecosystem::app/00000000-0000-0000-0000-000000000000
+permissions:
+  scopes:
+    - read:jira-work
+    - write:jira-work
+    - read:jira-user
+    - storage:app
